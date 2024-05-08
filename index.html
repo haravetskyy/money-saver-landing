@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Home</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css?_v=20231024021402" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css?_v=20231024021402">
+	<link rel="stylesheet" href="css/style.min.css?_v=20231024021402">
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css?_v=20231024021402">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css?_v=20231024021402" />
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css?_v=20231024021402" />
+
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header-top">
+				<div class="header__container">
+					<p>
+						Wpisz kod rabatowy: <a href="#">wakacje</a> i zarezerwuj apartament w
+						promocyjnej cenie
+					</p>
+					<a href="#">Gwarancja najniższej ceny!</a>
+				</div>
+			</div>
+			<div class="header__container">
+				<div class="menu_lan-tel">
+					<div class="language">
+						<a href="#" class="language-pl language-pl-active"><picture><source srcset="img/flaga-polska.webp" type="image/webp"><img src="img/flaga-polska.png" alt="polska" /></picture>PL</a>
+						<a href="#" class="language-en">EN<picture><source srcset="img/Flag_of_Great_Britain_(1707–1800).webp" type="image/webp"><img src="img/Flag_of_Great_Britain_(1707–1800).png" alt="eng" /></picture></a>
+					</div>
+					<p><a href="tel:+48987654321">+48 987 654 321</a></p>
+				</div>
+			</div>
+			<div class="header-center">
+				<div class="header__container box-row">
+					<div class="header_border-bt">
+						<div class="logo">
+							<img src="img/zloty poziom nie haslo.png" alt="logo" />
+						</div>
+						<div class="filters">
+							<button type="button" class="filter_btn filter_btns filter-city-btn">
+								Miejsce
+							</button>
+
+							<button type="button" class="filter_btn filter_btns filter-btn-termit">
+								<input id="myDatePicker" type="text" placeholder="Termin" />
+							</button>
+							<button type="button" class="filter_btn filter_btns filter-btn-people">
+								Ilość osób
+							</button>
+
+							<button type="submit" class="filter_btn filter-btn-active">
+								<span class="icon-lupa"></span><span>Wyszukaj</span>
+							</button>
+							<ul class="filter-content content-city">
+								<div>
+									<input autocomplete="off" id="radio-city-1" type="radio" name="radio-1" data-error="Error" placeholder="" />
+									<label for="radio-city-1">Lorem, ipsum1.</label>
+								</div>
+								<div>
+									<input autocomplete="off" id="radio-city-2" type="radio" name="radio-1" data-error="Error" placeholder="" />
+									<label for="radio-city-2">Lorem, ipsum2.</label>
+								</div>
+								<div>
+									<input autocomplete="off" id="radio-city-3" type="radio" name="radio-1" data-error="Error" placeholder="" />
+									<label for="radio-city-3">Lorem, ipsum3.</label>
+								</div>
+								<div>
+									<input autocomplete="off" id="radio-city-4" type="radio" name="radio-1" data-error="Error" placeholder="" />
+									<label for="radio-city-4">Lorem, ipsum4.</label>
+								</div>
+								<div>
+									<input autocomplete="off" id="radio-city-5" type="radio" name="radio-1" data-error="Error" placeholder="" />
+									<label for="radio-city-5">Lorem, ipsum5.</label>
+								</div>
+
+								<a href="#" class="btn-gold btn-close-filter">Wybierz</a>
+							</ul>
+							<span class="filter-content" style="display: none"></span>
+							<ul class="filter-content content-people">
+								<li>
+									<span>Dorosli</span>
+									<div class="ci-input-number age">
+										<input class="ci-number" name="children" type="text" min="0" value="0" step="1" />
+									</div>
+								</li>
+								<li>
+									<span>Dzieci</span>
+									<div class="ci-input-number age">
+										<input class="ci-number" name="children" type="text" min="0" value="0" step="1" />
+									</div>
+								</li>
+								<a href="#" class="btn-gold btn-close-filter btn-people">Wybierz</a>
+							</ul>
+						</div>
+
+						<div class="menu">
+							<div class="menu_nav nav">
+								<div class="btn_container">
+									<button type="button" class="btn-white btn-map" data-modal>
+										<span class="icon-map"></span>Mapa
+									</button>
+
+									<button type="button" class="btn-white btn-filters1">
+										<span class="icon-filter"></span> Filtry
+									</button>
+								</div>
+								<div class="nav_search search" data-search>
+									<input autocomplete="off" type="text" name="form[]" data-error="ERROR" placeholder="" class="input-search" /><span class="icon-lupa"></span>
+								</div>
+								<div class="burger_menu">
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
+								<div class="nav-container">
+									<div class="nav-close close__container">
+										<img src="img/zloty poziom nie haslo.png" alt="logo" />
+										<img class="close" src="img/icons/close.svg" alt="close" />
+									</div>
+									<ul class="nav-list">
+										<li class="nav-item active">
+											<a href="index.html">Strona główna</a>
+										</li>
+										<li class="nav-item"><a href="#">Obiekty</a></li>
+										<li class="nav-item"><a href="#">Oferty specjalne</a></li>
+
+										<li class="nav-item"><a href="#">Współpraca</a></li>
+										<li class="nav-item">
+											<a href="#"><span class="_icon-cart"></span>Blog </a>
+										</li>
+										<li class="nav-item"><a href="#">Panel właściciela</a></li>
+										<li class="nav-item"><a href="#">Kontakt</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header-bottom element-animation">
+				<div class="header__container">
+					<div class="header-bottom_filters" data-flickity='{ "draggable": false, "contain": true,"pageDots": false, "groupCells": true }'>
+						<button type="button" class="carousel-cell">
+							<img src="img/icons/icon-ski.svg" alt="ski" />
+							<p>Przy stoku lore</p>
+						</button>
+						<button type="button" class="carousel-cell">
+							<img src="img/icons/icon-ski.svg" alt="ski" />
+							<p>Przy stoku</p>
+						</button>
+						<button type="button" class="carousel-cell">
+							<img src="img/icons/icon-ski.svg" alt="ski" />
+							<p>Przy stoku</p>
+						</button>
+						<button type="button" class="carousel-cell">
+							<img src="img/icons/icon-ski.svg" alt="ski" />
+							<p>Przy stoku</p>
+						</button>
+						<button type="button" class="carousel-cell">
+							<img src="img/icons/icon-ski.svg" alt="ski" />
+							<p>Przy stoku lore</p>
+						</button>
+						<button type="button" class="carousel-cell">
+							<img src="img/icons/icon-ski.svg" alt="ski" />
+							<p>Przy stoku</p>
+						</button>
+						<button type="button" class="carousel-cell">
+							<img src="img/icons/icon-ski.svg" alt="ski" />
+							<p>Przy stoku</p>
+						</button>
+						<button type="button" class="carousel-cell">
+							<img src="img/icons/icon-ski.svg" alt="ski" />
+							<p>Przy stoku</p>
+						</button>
+						<button type="button" class="carousel-cell">
+							<img src="img/icons/icon-ski.svg" alt="ski" />
+							<p>Przy stoku lore</p>
+						</button>
+						<button type="button" class="carousel-cell">
+							<img src="img/icons/icon-ski.svg" alt="ski" />
+							<p>Przy stoku</p>
+						</button>
+						<button type="button" class="carousel-cell">
+							<img src="img/icons/icon-ski.svg" alt="ski" />
+							<p>Przy stoku</p>
+						</button>
+						<button type="button" class="carousel-cell">
+							<img src="img/icons/icon-ski.svg" alt="ski" />
+							<p>Przy stoku</p>
+						</button>
+						<button type="button" class="carousel-cell">
+							<img src="img/icons/icon-ski.svg" alt="ski" />
+							<p>Przy stoku lore</p>
+						</button>
+						<button type="button" class="carousel-cell">
+							<img src="img/icons/icon-ski.svg" alt="ski" />
+							<p>Przy stoku</p>
+						</button>
+						<button type="button" class="carousel-cell">
+							<img src="img/icons/icon-ski.svg" alt="ski" />
+							<p>Przy stoku</p>
+						</button>
+						<button type="button" class="carousel-cell">
+							<img src="img/icons/icon-ski.svg" alt="ski" />
+							<p>Przy stoku</p>
+						</button>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="header-bottom-mobile">
+			<div class="btn_container">
+				<button type="button" class="btn-white btn-filters1">
+					<span class="icon-filter"></span> Filtry
+				</button>
+				<button type="button" class="btn-white btn-map" data-modal>
+					<span class="icon-map"></span>Mapa
+				</button>
+				<a href="form.html" class="btn-white"><span class="icon-map"></span>Zaloguj się</a>
+			</div>
+		</div>
+
+		<main class="page">
+			<section class="product_main">
+				<div class="product__container">
+					<div class="product_list">
+						<div class="item ">
+							<div class="product-swiper">
+								<div class="carousel-cell"><picture><source data-srcset="img/apartamenty-pod-stokiem-pokoje-21769-1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  class="lazyload" preload data-src="img/apartamenty-pod-stokiem-pokoje-21769-1.png" alt="apartamenty"></picture></div>
+								<div class="carousel-cell"><picture><source data-srcset="img/apartamenty-pod-stokiem-pokoje-21769-1.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  class="lazyload" preload data-src="img/apartamenty-pod-stokiem-pokoje-21769-1.png" alt="apartamenty"></picture></div>
+							</div>
+							<a href="product-cart.html">
+								<h2>
+									Szczyrk, ul. Pod Stokiem 10
+								</h2>
+								<p>50 apartamentów</p>
+								<p>Powierzchnia od 29m2 do 60 m2</p>
+								<div class="item_cena">
+									<p>Od 100 zł/noc</p>
+									<p><span class="icon-star"></span>5,0</p>
+								</div>
+							</a>
+
+						</div>
+						<div class="item item-big product-swiper" data-flickity='{ "autoPlay": true ,"prevNextButtons": false ,"pageDots": false }'>
+							<div class="carousel-cell">
+								<div class="product-swiper">
+									<div class="carousel-cell"><picture><source data-srcset="img/pexels-kevin-bidwell-1692861.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  class="lazyload" preload data-src="img/pexels-kevin-bidwell-1692861.png" alt="apartamenty"></picture></div>
+									<div class="carousel-cell"><picture><source data-srcset="img/pexels-kevin-bidwell-1692861.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  class="lazyload" data-src="img/pexels-kevin-bidwell-1692861.png" alt="apartamenty"></picture></div>
+									<div class="carousel-cell"><picture><source data-srcset="img/pexels-kevin-bidwell-1692861.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  class="lazyload" data-src="img/pexels-kevin-bidwell-1692861.png" alt="apartamenty"></picture></div>
+								</div>
+								<h2>
+									Szczyrk, ul. Pod Stokiem 10
+								</h2>
+								<p>50 apartamentów</p>
+								<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias, dignissimos.</p>
+								<div class="item_cena">
+									<p>Od 100 zł/noc</p>
+									<p><span class="icon-star"></span>5,0</p>
+								</div>
+
+							</div>
+							<div class="carousel-cell">
+								<div class="product-swiper">
+									<div class="carousel-cell"><picture><source data-srcset="img/pexels-kevin-bidwell-1692861.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  class="lazyload" data-src="img/pexels-kevin-bidwell-1692861.png" alt="apartamenty"></picture></div>
+									<div class="carousel-cell"><picture><source data-srcset="img/pexels-kevin-bidwell-1692861.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  class="lazyload" data-src="img/pexels-kevin-bidwell-1692861.png" alt="apartamenty"></picture></div>
+									<div class="carousel-cell"><picture><source data-srcset="img/pexels-kevin-bidwell-1692861.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  class="lazyload" data-src="img/pexels-kevin-bidwell-1692861.png" alt="apartamenty"></picture></div>
+								</div>
+								<h2>
+									Szczyrk, ul. Pod Stokiem 10
+								</h2>
+								<p>50 apartamentów</p>
+								<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias, dignissimos.</p>
+								<div class="item_cena">
+									<p>Od 100 zł/noc</p>
+									<p><span class="icon-star"></span>5,0</p>
+								</div>
+
+							</div>
+						</div>
+						<div class="item">
+							<div class="product-swiper">
+								<div class="carousel-cell"><img class="lazyload" data-src="img/dream-apart-wisla-pokoje-15997-17.png                     " alt="apartamenty"></div>
+							</div>
+							<a href="#">
+								<h2>
+									Szczyrk, ul. Pod Stokiem 10
+								</h2>
+								<p>50 apartamentów</p>
+								<p>Powierzchnia od 29m2 do 60 m2</p>
+								<div class="item_cena">
+									<p>Od 100 zł/noc</p>
+									<p><span class="icon-star"></span>5,0</p>
+								</div>
+							</a>
+
+						</div>
+						<div class="item">
+							<div class="product-swiper">
+								<div class="carousel-cell"><picture><source data-srcset="img/IMG_6655.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  class="lazyload" data-src="img/IMG_6655.png" alt="apartamenty"></picture></div>
+							</div>
+							<a href="#">
+								<h2>
+									Szczyrk, ul. Pod Stokiem 10
+								</h2>
+								<p>50 apartamentów</p>
+								<p>Powierzchnia od 29m2 do 60 m2</p>
+								<div class="item_cena">
+									<p>Od 100 zł/noc</p>
+									<p><span class="icon-star"></span>5,0</p>
+								</div>
+							</a>
+
+						</div>
+						<div class="item">
+							<div class="product-swiper">
+								<div class="carousel-cell"><picture><source data-srcset="img/IMG_2435.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  class="lazyload" data-src="img/IMG_2435.png" alt="apartamenty"></picture></div>
+							</div>
+							<a href="#">
+								<h2>
+									Szczyrk, ul. Pod Stokiem 10
+								</h2>
+								<p>50 apartamentów</p>
+								<p>Powierzchnia od 29m2 do 60 m2</p>
+								<div class="item_cena">
+									<p>Od 100 zł/noc</p>
+									<p><span class="icon-star"></span>5,0</p>
+								</div>
+							</a>
+
+						</div>
+						<div class="item">
+							<div class="product-swiper">
+								<div class="carousel-cell"><picture><source data-srcset="img/asnyka5e-22.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  class="lazyload" data-src="img/asnyka5e-22.png" alt="apartamenty"></picture></div>
+							</div>
+							<a href="#">
+								<h2>
+									Szczyrk, ul. Pod Stokiem 10
+								</h2>
+								<p>50 apartamentów</p>
+								<p>Powierzchnia od 29m2 do 60 m2</p>
+								<div class="item_cena">
+									<p>Od 100 zł/noc</p>
+									<p><span class="icon-star"></span>5,0</p>
+								</div>
+							</a>
+
+						</div>
+						<div class="item">
+							<div class="product-swiper">
+								<div class="carousel-cell"><picture><source data-srcset="img/IMG_5854.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  class="lazyload" data-src="img/IMG_5854.png" alt="apartamenty"></picture></div>
+							</div>
+							<a href="#">
+								<h2>
+									Szczyrk, ul. Pod Stokiem 10
+								</h2>
+								<p>50 apartamentów</p>
+								<p>Powierzchnia od 29m2 do 60 m2</p>
+								<div class="item_cena">
+									<p>Od 100 zł/noc</p>
+									<p><span class="icon-star"></span>5,0</p>
+								</div>
+							</a>
+
+						</div>
+						<div class="item">
+							<div class="product-swiper">
+								<div class="carousel-cell"><img class="lazyload" data-src="img/dream-apart-kozubnik-pokoje-18239-12.png                     " alt="apartamenty">
+								</div>
+							</div>
+							<a href="#">
+								<h2>
+									Szczyrk, ul. Pod Stokiem 10
+								</h2>
+								<p>50 apartamentów</p>
+								<p>Powierzchnia od 29m2 do 60 m2</p>
+								<div class="item_cena">
+									<p>Od 100 zł/noc</p>
+									<p><span class="icon-star"></span>5,0</p>
+								</div>
+							</a>
+
+						</div>
+						<div class="item">
+							<div class="product-swiper">
+								<div class="carousel-cell"><picture><source data-srcset="img/kozubnik_.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  class="lazyload" data-src="img/kozubnik_.png" alt="apartamenty"></picture></div>
+							</div>
+							<a href="#">
+								<h2>
+									Szczyrk, ul. Pod Stokiem 10
+								</h2>
+								<p>50 apartamentów</p>
+								<p>Powierzchnia od 29m2 do 60 m2</p>
+								<div class="item_cena">
+									<p>Od 100 zł/noc</p>
+									<p><span class="icon-star"></span>5,0</p>
+								</div>
+							</a>
+
+						</div>
+						<div class="item">
+							<div class="product-swiper">
+								<div class="carousel-cell"><picture><source data-srcset="img/DSC08196.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  class="lazyload" data-src="img/DSC08196.png" alt="apartamenty"></picture></div>
+							</div>
+							<a href="#">
+								<h2>
+									Szczyrk, ul. Pod Stokiem 10
+								</h2>
+								<p>50 apartamentów</p>
+								<p>Powierzchnia od 29m2 do 60 m2</p>
+								<div class="item_cena">
+									<p>Od 100 zł/noc</p>
+									<p><span class="icon-star"></span>5,0</p>
+								</div>
+							</a>
+
+						</div>
+						<div class="item">
+							<div class="product-swiper">
+								<div class="carousel-cell"><picture><source data-srcset="img/IMG_3250.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  class="lazyload" data-src="img/IMG_3250.png" alt="apartamenty"></picture></div>
+								<div class="carousel-cell"><picture><source data-srcset="img/IMG_3250.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  class="lazyload" data-src="img/IMG_3250.png" alt="apartamenty"></picture></div>
+								<div class="carousel-cell"><picture><source data-srcset="img/IMG_3250.webp" srcset="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" type="image/webp"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="  class="lazyload" data-src="img/IMG_3250.png" alt="apartamenty"></picture></div>
+							</div>
+							<a href="#">
+								<h2>
+									Szczyrk, ul. Pod Stokiem 10
+								</h2>
+								<p>50 apartamentów</p>
+								<p>Powierzchnia od 29m2 do 60 m2</p>
+								<div class="item_cena">
+									<p>Od 100 zł/noc</p>
+									<p><span class="icon-star"></span>5,0</p>
+								</div>
+							</a>
+
+						</div>
+					</div>
+					<div class="btn-gold">Zobacz wszystkie</div>
+				</div>
+			</section>
+			<section class="block_main">
+				<div class="block__container">
+					<h2 class="title-line title">Private apartments <span>with Hospitality</span></h2>
+					<p>We promise private, professionally-cleaned vacation rentals with 24/7 guest support so you can travel
+						without
+						worry.</p>
+				</div>
+			</section>
+			<section class="pluses_main">
+				<div class="pluses__container">
+					<div class="pluses-list">
+						<div class="pluses-item">
+							<img src="img/icons/icon-best-rate-1.svg" alt="pluses">
+							<h6>Best rate</h6>
+							<p>You’re guaranteed to book the best rates on our vacation homes at evolve.com.</p>
+						</div>
+						<div class="pluses-item">
+							<img src="img/icons/icon-best-rate-1.svg" alt="pluses">
+							<h6>Best rate</h6>
+							<p>You’re guaranteed to book the best rates on our vacation homes at evolve.com.</p>
+						</div>
+						<div class="pluses-item">
+							<img src="img/icons/icon-best-rate-1.svg" alt="pluses">
+							<h6>Best rate</h6>
+							<p>You’re guaranteed to book the best rates on our vacation homes at evolve.com.</p>
+						</div>
+						<div class="pluses-item">
+							<img src="img/icons/icon-best-rate-1.svg" alt="pluses">
+							<h6>Best rate</h6>
+							<p>You’re guaranteed to book the best rates on our vacation homes at evolve.com.</p>
+						</div>
+						<div class="pluses-item">
+							<img src="img/icons/icon-best-rate-1.svg" alt="pluses">
+							<h6>Best rate</h6>
+							<p>You’re guaranteed to book the best rates on our vacation homes at evolve.com.</p>
+						</div>
+						<div class="pluses-item">
+							<img src="img/icons/icon-best-rate-1.svg" alt="pluses">
+							<h6>Best rate</h6>
+							<p>You’re guaranteed to book the best rates on our vacation homes at evolve.com.</p>
+						</div>
+					</div>
+					<div class="pluses2-box">
+						<div>
+							<h5 class="title-line">Choose your adventure</h5>
+							<h2 class="title">
+								<span>Ski or sun? </span>Pick your fun!
+							</h2>
+							<p>From the highest peaks to the sunniest beaches, our homes give you access to outdoor activities right
+								outside your door.</p>
+						</div>
+						<div>
+							<picture><source srcset="img/pexels-fauxels-3182787.webp" type="image/webp"><img src="img/pexels-fauxels-3182787.png" alt="pluses-img"></picture>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="level_main ">
+				<div class="swiper mySwiperlevel">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class=" level__container">
+								<div>
+									<h2 class="title title-line">
+										<span>Rośniemy </span>dla Was
+									</h2>
+									<div class="level-box element-animation">
+										<p><span>10 </span> apartamentów</p>
+										<p><span>2</span> miasta</p>
+										<p><span>150</span> rezerwacji</p>
+										<p><span>20 000 zł</span> wypłaconych prowizji</p>
+									</div>
+								</div>
+								<div class="circle-container circle-animation">
+									<div class="text">2020</div>
+								</div>
+
+
+							</div>
+						</div>
+
+						<div class="swiper-slide">
+							<div class=" level__container">
+								<div>
+									<h2 class="title title-line">
+										<span>Rośniemy </span>dla Was
+									</h2>
+									<div class="level-box element-animation">
+										<p><span>10 </span> apartamentów</p>
+										<p><span>2</span> miasta</p>
+										<p><span>150</span> rezerwacji</p>
+										<p><span>20 000 zł</span> wypłaconych prowizji</p>
+									</div>
+								</div>
+								<div class="circle-container circle-animation">
+									<div class="text">2020</div>
+								</div>
+
+
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class=" level__container">
+								<div>
+									<h2 class="title title-line">
+										<span>Rośniemy </span>dla Was
+									</h2>
+									<div class="level-box element-animation">
+										<p><span>10 </span> apartamentów</p>
+										<p><span>2</span> miasta</p>
+										<p><span>150</span> rezerwacji</p>
+										<p><span>20 000 zł</span> wypłaconych prowizji</p>
+									</div>
+								</div>
+								<div class="circle-container circle-animation">
+									<div class="text">2020</div>
+								</div>
+
+
+							</div>
+						</div>
+			</section>
+			<section class="block_main">
+				<div class="block__container box-row">
+					<div>
+						<p class="gold">Zapisz się do newslettera i otrzymaj 10% rabat na pierwszą rezerwację</p>
+						<h3>Chcesz rezerwować taniej? </h3>
+						<p>Co dwa tygodnie wysyłać będziemy na Twojego maila kody promocyjne!</p>
+					</div>
+					<form action="/submit" method="post">
+
+						<div class="title-line"> <input type="email" placeholder="Adres e-mail" name="email" required></div>
+						<button type="submit" class="btn-gold">Zapisz się</button>
+					</form>
+
+				</div>
+			</section>
+			<section class="media_main">
+				<div class="media__container">
+					<div class="icons-media">
+						<a href="#" class="icon-instagram"></a>
+						<a href="#" class="icon-facebook"></a>
+						<a href="#" class="icon-youtube"></a>
+					</div>
+					<div class="swiper mySwiper-media">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="img/Zrzut ekranu 2022-12-8 o 11.36.55.png" alt="img"></div>
+							<div class="swiper-slide"><img src="img/Zrzut ekranu 2022-12-8 o 11.37.07.png" alt="img"></div>
+							<div class="swiper-slide"><img src="img/Zrzut ekranu 2022-12-8 o 11.37.22.png" alt="img"></div>
+							<div class="swiper-slide"><img src="img/Zrzut ekranu 2022-12-8 o 11.37.37.png" alt="img"></div>
+							<div class="swiper-slide"><img src="img/Zrzut ekranu 2022-12-8 o 11.36.55.png" alt="img"></div>
+							<div class="swiper-slide"><img src="img/Zrzut ekranu 2022-12-8 o 11.36.55.png" alt="img"></div>
+						</div>
+
+					</div>
+					<div class="title-arrows-box">
+						<h2 class="title title-line"><span>Odwiedź nas w </span> social mediach</h2>
+						<div class="aroows-box">
+							<div class="swiper-button-prev-media"><span class="icon-p-left"></span></div>
+							<div class="swiper-button-next-media"><span class="icon-p-right"></span></div>
+						</div>
+
+
+
+
+					</div>
+				</div>
+			</section>
+			<section class="faq_main">
+				<div class="faq__container">
+					<h2 class="title title-line">
+						<span>Najczęściej zadawane </span>pytania
+					</h2>
+					<div class="faq-list">
+						<div class="faq-item">
+							<a href="#" class="spoiler-trigger btn-white faq-btn">
+								<p>Co to jest apartament inwestycyjny?</p> <span class="icon-arrow-down"></span>
+							</a>
+							<div class="spoiler-block faq-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+								maxime quisquam
+								commodi id quibusdam ipsam vel accusamus autem ab provident! Et consequuntur minima ad repudiandae
+								nemo. Temporibus dolore illo sint.</div>
+						</div>
+						<div class="faq-item">
+							<a href="#" class="spoiler-trigger btn-white faq-btn">
+								<p>Co to jest apartament inwestycyjny?</p> <span class="icon-arrow-down"></span>
+							</a>
+							<div class="spoiler-block faq-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+								maxime quisquam
+								commodi id quibusdam ipsam vel accusamus autem ab provident! Et consequuntur minima ad repudiandae
+								nemo. Temporibus dolore illo sint.</div>
+						</div>
+						<div class="faq-item">
+							<a href="#" class="spoiler-trigger btn-white faq-btn">
+								<p>Co to jest apartament inwestycyjny?</p> <span class="icon-arrow-down"></span>
+							</a>
+							<div class="spoiler-block faq-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+								maxime quisquam
+								commodi id quibusdam ipsam vel accusamus autem ab provident! Et consequuntur minima ad repudiandae
+								nemo. Temporibus dolore illo sint.</div>
+						</div>
+						<div class="faq-item">
+							<a href="#" class="spoiler-trigger btn-white faq-btn">
+								<p>Co to jest apartament inwestycyjny?</p> <span class="icon-arrow-down"></span>
+							</a>
+							<div class="spoiler-block faq-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+								maxime quisquam
+								commodi id quibusdam ipsam vel accusamus autem ab provident! Et consequuntur minima ad repudiandae
+								nemo. Temporibus dolore illo sint.</div>
+						</div>
+						<div class="faq-item">
+							<a href="#" class="spoiler-trigger btn-white faq-btn">
+								<p>Co to jest apartament inwestycyjny?</p> <span class="icon-arrow-down"></span>
+							</a>
+							<div class="spoiler-block faq-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+								maxime quisquam
+								commodi id quibusdam ipsam vel accusamus autem ab provident! Et consequuntur minima ad repudiandae
+								nemo. Temporibus dolore illo sint.</div>
+						</div>
+
+					</div>
+				</div>
+
+			</section>
+			<section class="block_main">
+				<div class="block__container">
+					<h5 class="title-line">Wisła, Szczyrk, Ustroń, Porąbka, Międzybrodzie, Bielsko-Biała</h5>
+					<h2 class="title"><span>Pokoje do wynajęcia </span> Dream Apart</h2>
+					<p>W górach jest wszystko, co kochamy – świeże powietrze, otaczająca nas natura i wspaniali, życzliwi ludzie. W
+						Dream Apart uważamy również, że Twój komfort podczas wypoczynku w Beskidzie Śląskim jest najważniejszy
+						Dlatego nasze pokoje do wynajęcia w Wiśle, Szczyrku, Ustroniu, Porąbce i Miedzybrodziu są przygotowane tak,
+						aby niczego Ci nie brakowało. W końcu każda chwila spędzona w górach powinna być magiczna, bez względu na
+						to, czy jesteś tu z rodziną czy znajomymi. Szukasz luksusowego apartamentu w Ustroniu, Szczyrku czy Wiśle,
+						aby w pełni korzystać z wszystkich miejscowych atrakcji? Zawsze chciałeś mieć z okna piękny widok na góry?
+						Nasze apartamenty do wynajęcia są świetnie zlokalizowane. Najpierw z łatwością do nich dojedziesz, a
+						następnie szybko trafisz na górskie szlaki, do centrum miasta czy na stok narciarski.</p>
+				</div>
+			</section>
+			<section class="block_main _block-bottom">
+				<div class="block__container">
+					<h5 class="title-line">Wisła, Szczyrk, Ustroń, Porąbka, Międzybrodzie, Bielsko-Biała</h5>
+					<h2 class="title"><span>Sprawdź gdzie nas </span> znajdziesz</h2>
+					<p>W górach jest wszystko, co kochamy – świeże powietrze, otaczająca nas natura i wspaniali, życzliwi ludzie. W
+						Dream Apart uważamy również, że Twój komfort podczas wypoczynku w Beskidzie Śląskim jest najważniejszy
+						Dlatego nasze pokoje do wynajęcia w Wiśle, Szczyrku, Ustroniu, Porąbce i Miedzybrodziu są przygotowane tak,
+						aby niczego Ci nie brakowało. W końcu każda chwila spędzona w górach powinna być magiczna, bez względu na
+						to, czy jesteś tu z rodziną czy znajomymi. Szukasz luksusowego apartamentu w Ustroniu, Szczyrku czy Wiśle,
+						aby w pełni korzystać z wszystkich miejscowych atrakcji? Zawsze chciałeś mieć z okna piękny widok na góry?
+						Nasze apartamenty do wynajęcia są świetnie zlokalizowane. Najpierw z łatwością do nich dojedziesz, a
+						następnie szybko trafisz na górskie szlaki, do centrum miasta czy na stok narciarski.</p>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer_list">
+					<ul>
+						<h3>Główne Biuro:</h3>
+						<address>
+							<a href="#"> ul. Grażyńskiego 8,<br> 43-450 Ustroń</a> <br><br>
+							<a href="tel:+48334712131">+48 33 471 21 31</a> <br>
+							<a href="mailto:info@dreamapart.pl">info@dreamapart.pl</a>
+
+						</address>
+					</ul>
+					<ul>
+						<h3>Mapa strony:</h3>
+						<li> <a href="index.html">Strona główna</a> </li>
+						<li> <a href="#">Obiekty</a></li>
+						<li><a href="#">Współpraca</a></li>
+						<li> <a href="#">Blog</a> </li>
+						<li> <a href="#">Kontakt</a> </li>
+					</ul>
+					<ul>
+						<a href="#"><span>Polityka prywatności</span></a>
+						<a href="#"><span>Regulamin</span></a>
+						<a href="#"><span>Regulamin konkursu</span></a>
+
+					</ul>
+				</div>
+				<div class="footer-hashtags">
+					<ul>
+
+						<li><a href="#">
+								#dreamapart
+							</a></li>
+						<li><a href="#">
+								#apartamenty
+							</a></li>
+						<li><a href="#">
+								#apartamentywbeskidach
+							</a></li>
+						<li><a href="#">
+								#beskidy
+							</a></li>
+						<li><a href="#">
+								#noclegi
+							</a></li>
+						<li><a href="#">
+								#noclegiwbeskidach
+							</a></li>
+					</ul>
+					<ul>
+
+						<li><a href="#">
+								#dreamapart
+							</a></li>
+						<li><a href="#">
+								#apartamenty
+							</a></li>
+						<li><a href="#">
+								#apartamentywbeskidach
+							</a></li>
+						<li><a href="#">
+								#beskidy
+							</a></li>
+						<li><a href="#">
+								#noclegi
+							</a></li>
+						<li><a href="#">
+								#noclegiwbeskidach
+							</a></li>
+					</ul>
+					<ul>
+
+						<li><a href="#">
+								#dreamapart
+							</a></li>
+						<li><a href="#">
+								#apartamenty
+							</a></li>
+						<li><a href="#">
+								#apartamentywbeskidach
+							</a></li>
+						<li><a href="#">
+								#beskidy
+							</a></li>
+						<li><a href="#">
+								#noclegi
+							</a></li>
+						<li><a href="#">
+								#noclegiwbeskidach
+							</a></li>
+					</ul>
+					<ul>
+
+						<li><a href="#">
+								#dreamapart
+							</a></li>
+						<li><a href="#">
+								#apartamenty
+							</a></li>
+						<li><a href="#">
+								#apartamentywbeskidach
+							</a></li>
+						<li><a href="#">
+								#beskidy
+							</a></li>
+						<li><a href="#">
+								#noclegi
+							</a></li>
+						<li><a href="#">
+								#noclegiwbeskidach
+							</a></li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<!-- <div class="map-popup">
+   <img class="close-popup" src="img/icons/close.svg" alt="close">
+   <div id="map"></div>
+</div> -->
+	<div class="map-popup">
+		<img class="close-popup" data-close src="img/icons/close.svg" alt="close">
+		<div id="map2"></div>
+	</div>
+	<div class="filters-popup">
+		<h2>Filtry</h2>
+		<img class="close-popup2" src="img/icons/close.svg" alt="close">
+		<span class="border-row">
+		</span>
+		<h4>Przedział cenowy</h4>
+		<form action="" id="myForm">
+			<input type="range" class="js-range-slider range-filter" name="my_range" value="" data-type="double" data-min="0" data-max="9999" data-from="200" data-to="9999" />
+			<div class="cena-filter">
+				<div>
+					<label for="cena">cena min.</label>
+					<input autocomplete="off" type="text" id="cena-number1" name="cena" data-error="Error" placeholder="zł 40" class="cena-filter-input">
+				</div>
+				<div>
+					<label for="cena2">cena maks.</label>
+					<input autocomplete="off" type="text" id="cena-number2" name="cena2" data-error="Error" placeholder="zł 25000+" class="cena-filter-input">
+				</div>
+			</div>
+			<span class="border-row">
+			</span>
+			<h4>Pokoje i łóżka</h4>
+			<h6>Sypialnie</h6>
+			<div class="radio radio-room1">
+
+
+				<div>
+					<label for="radio1">Dowolne</label>
+					<input autocomplete="off" id="radio1" type="radio" name="radio" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio2">1</label>
+					<input autocomplete="off" id="radio2" type="radio" name="radio" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio3">2</label>
+					<input autocomplete="off" id="radio3" type="radio" name="radio" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio4">3</label>
+					<input autocomplete="off" id="radio4" type="radio" name="radio" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio5">4</label>
+					<input autocomplete="off" id="radio5" type="radio" name="radio" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio6">5</label>
+					<input autocomplete="off" id="radio6" type="radio" name="radio" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio7">6</label>
+					<input autocomplete="off" id="radio7" type="radio" name="radio" data-error="Error" placeholder="" class="radio-input">
+				</div>
+
+			</div>
+			<h6>Pokoje</h6>
+			<div class="radio  radio-room2">
+
+
+				<div>
+					<label for="radio1-2">Dowolne</label>
+					<input autocomplete="off" id="radio1-2" type="radio" name="radio1" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio2-2">1</label>
+					<input autocomplete="off" id="radio2-2" type="radio" name="radio1" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio3-2">2</label>
+					<input autocomplete="off" id="radio3-2" type="radio" name="radio1" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio4-2">3</label>
+					<input autocomplete="off" id="radio4-2" type="radio" name="radio1" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio5-2">4</label>
+					<input autocomplete="off" id="radio5-2" type="radio" name="radio1" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio6-2">5</label>
+					<input autocomplete="off" id="radio6-2" type="radio" name="radio1" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio7-2">6</label>
+					<input autocomplete="off" id="radio7-2" type="radio" name="radio1" data-error="Error" placeholder="" class="radio-input">
+				</div>
+
+			</div>
+			<h6>Łazienki</h6>
+			<div class="radio  radio-room3">
+
+
+				<div>
+					<label for="radio1-3">Dowolne</label>
+					<input autocomplete="off" id="radio1-3" type="radio" name="radio2" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio2-3">1</label>
+					<input autocomplete="off" id="radio2-3" type="radio" name="radio2" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio3-3">2</label>
+					<input autocomplete="off" id="radio3-3" type="radio" name="radio2" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio4-3">3</label>
+					<input autocomplete="off" id="radio4-3" type="radio" name="radio2" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio5-3">4</label>
+					<input autocomplete="off" id="radio5-3" type="radio" name="radio2" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio6-3">5</label>
+					<input autocomplete="off" id="radio6-3" type="radio" name="radio2" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio7-3">6</label>
+					<input autocomplete="off" id="radio7-3" type="radio" name="radio2" data-error="Error" placeholder="" class="radio-input">
+				</div>
+
+			</div>
+			<span class="border-row">
+			</span>
+			<h4>Rodzaj nieruchomości</h4>
+			<div class="radio2">
+
+
+				<div>
+					<label for="radio1-4"><img src="img/icons/icon-person-1.svg" alt=""> <br><br> Apartament</label>
+					<input autocomplete="off" id="radio1-4" type="radio" name="radio3" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio2-4"><img src="img/icons/icon-person-1.svg" alt=""> <br><br> Apartament</label>
+					<input autocomplete="off" id="radio2-4" type="radio" name="radio3" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio3-4"><img src="img/icons/icon-person-1.svg" alt=""> <br><br> Apartament</label>
+					<input autocomplete="off" id="radio3-4" type="radio" name="radio3" data-error="Error" placeholder="" class="radio-input">
+				</div>
+				<div>
+					<label for="radio4-4"><img src="img/icons/icon-person-1.svg" alt=""> <br><br> Apartament</label>
+					<input autocomplete="off" id="radio4-4" type="radio" name="radio3" data-error="Error" placeholder="" class="radio-input">
+				</div>
+
+
+
+			</div>
+			<span class="border-row">
+			</span>
+			<h4>Udogodnienia</h4>
+			<h6>Ogólne</h6>
+			<div class="checkbox-form">
+
+
+				<div>
+					<input autocomplete="off" id="checkbox-1" type="checkbox" name="checkbox-1" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-1">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-2" type="checkbox" name="checkbox-2" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-2">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-3" type="checkbox" name="checkbox-3" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-3">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-4" type="checkbox" name="checkbox-4" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-4">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-5" type="checkbox" name="checkbox-5" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-5">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-6" type="checkbox" name="checkbox-6" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-6">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-7" type="checkbox" name="checkbox-7" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-7">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-8" type="checkbox" name="checkbox-8" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-8">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-9" type="checkbox" name="checkbox-9" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-9">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-10" type="checkbox" name="checkbox-10" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-10">Parawan</label>
+				</div>
+			</div>
+			<h6>Ogólne</h6>
+			<div class="checkbox-form">
+
+
+				<div>
+					<input autocomplete="off" id="checkbox-1-1" type="checkbox" name="checkbox-1-1" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-1-1">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-2-1" type="checkbox" name="checkbox-2-1" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-2-1">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-3-1" type="checkbox" name="checkbox-3-1" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-3-1">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-4-1" type="checkbox" name="checkbox-4-1" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-4-1">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-5-1" type="checkbox" name="checkbox-5-1" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-5-1">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-6-1" type="checkbox" name="checkbox-6-1" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-6-1">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-7-1" type="checkbox" name="checkbox-7-1" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-7-1">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-8-1" type="checkbox" name="checkbox-8-1" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-8-1">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-9-1" type="checkbox" name="checkbox-9-1" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-9-1">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-10-1" type="checkbox" name="checkbox-10-1" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-10-1">Parawan</label>
+				</div>
+			</div>
+			<h6>Ogólne</h6>
+			<div class="checkbox-form">
+
+
+				<div>
+					<input autocomplete="off" id="checkbox-1-2" type="checkbox" name="checkbox-1-2" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-1-2">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-2-2" type="checkbox" name="checkbox-2-2" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-2-2">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-3-2" type="checkbox" name="checkbox-3-2" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-3-2">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-4-2" type="checkbox" name="checkbox-4-2" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-4-2">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-5-2" type="checkbox" name="checkbox-5-2" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-5-2">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-6-2" type="checkbox" name="checkbox-6-2" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-6-2">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-7-2" type="checkbox" name="checkbox-7-2" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-7-2">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-8-2" type="checkbox" name="checkbox-8-2" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-8-2">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-9-2" type="checkbox" name="checkbox-9-2" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-9-2">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-10-2" type="checkbox" name="checkbox-10-2" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-10-2">Parawan</label>
+				</div>
+			</div>
+			<h6>Ogólne</h6>
+			<div class="checkbox-form">
+
+
+				<div>
+					<input autocomplete="off" id="checkbox-1-3" type="checkbox" name="checkbox-1-3" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-1-3">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-2-3" type="checkbox" name="checkbox-2-3" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-2-3">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-3-3" type="checkbox" name="checkbox-3-3" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-3-3">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-4-3" type="checkbox" name="checkbox-4-3" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-4-3">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-5-3" type="checkbox" name="checkbox-5-3" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-5-3">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-6-3" type="checkbox" name="checkbox-6-3" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-6-3">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-7-3" type="checkbox" name="checkbox-7-3" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-7-3">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-8-3" type="checkbox" name="checkbox-8-3" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-8-3">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-9-3" type="checkbox" name="checkbox-9-3" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-9-3">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-10-3" type="checkbox" name="checkbox-10-3" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-10-3">Parawan</label>
+				</div>
+			</div>
+			<h6>Ogólne</h6>
+			<div class="checkbox-form">
+
+
+				<div>
+					<input autocomplete="off" id="checkbox-1-4" type="checkbox" name="checkbox-1-4" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-1-4">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-2-4" type="checkbox" name="checkbox-2-4" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-2-4">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-3-4" type="checkbox" name="checkbox-3-4" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-3-4">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-4-4" type="checkbox" name="checkbox-4-4" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-4-4">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-5-4" type="checkbox" name="checkbox-5-4" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-5-4">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-6-4" type="checkbox" name="checkbox-6-4" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-6-4">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-7-4" type="checkbox" name="checkbox-7-4" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-7-4">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-8-4" type="checkbox" name="checkbox-8-4" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-8-4">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-9-4" type="checkbox" name="checkbox-9-4" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-9-4">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-10-4" type="checkbox" name="checkbox-10-4" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-10-4">Parawan</label>
+				</div>
+			</div>
+			<h6>Ogólne</h6>
+			<div class="checkbox-form">
+
+
+				<div>
+					<input autocomplete="off" id="checkbox-1-5" type="checkbox" name="checkbox-1-5" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-1-5">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-2-5" type="checkbox" name="checkbox-2-5" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-2-5">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-3-5" type="checkbox" name="checkbox-3-5" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-3-5">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-4-5" type="checkbox" name="checkbox-4-5" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-4-5">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-5-5" type="checkbox" name="checkbox-5-5" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-5-5">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-6-5" type="checkbox" name="checkbox-6-5" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-6-5">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-7-5" type="checkbox" name="checkbox-7-5" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-7-5">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-8-5" type="checkbox" name="checkbox-8-5" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-8-5">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-9-5" type="checkbox" name="checkbox-9-5" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-9-5">Parawan</label>
+				</div>
+				<div>
+					<input autocomplete="off" id="checkbox-10-5" type="checkbox" name="checkbox-10-5" data-error="Error" placeholder="" class="checkbox">
+					<label for="checkbox-10-5">Parawan</label>
+				</div>
+			</div>
+			<span class="border-row">
+			</span>
+			<div class="btn-box">
+				<input type="reset" class="btn-reset" value="Wyczyść wszystko">
+				<button class="button btn-gold" type="submit">Pokaż 35 wyników</button>
+			</div>
+		</form>
+
+
+	</div>
+	<script src="https://code.jquery.com/jquery-3.7.0.min.js?_v=20231024021402" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+	<script src="js/app.min.js?_v=20231024021402"></script>
+	<script src="https://cdn.jsdelivr.net/npm/flatpickr?_v=20231024021402"></script>
+	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js?_v=20231024021402"></script>
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js?_v=20231024021402" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js?_v=20231024021402"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js?_v=20231024021402" defer></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js?_v=20231024021402"></script>
+
+	<script src="https://npmcdn.com/flatpickr/dist/flatpickr.min.js?_v=20231024021402"></script>
+	<script src="https://npmcdn.com/flatpickr/dist/l10n/ru.js?_v=20231024021402"></script>
+	<script>
+		window.onload = function() {
+			if (document.querySelector('#map') !== null) {
+				var map = L.map('map').setView([52.2297700, 21.0117800], 13);
+				L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+					maxZoom: 30,
+				}).addTo(map);
+
+
+				var popup = L.popup()
+					.setLatLng([52.2297700, 21.0117800])
+					.setContent(`   <div class="marker-map_container"><img src='img/056A3873.png' alt="map"><h6>Projekt Cuberniok</h6><p>Szczyrk, ul. Pod Stokiem 10</p><button type="button" class="btn-gold">Sprawdź dojazd</button></div> `)
+
+					.openOn(map);
+
+
+
+
+
+			}
+			if (document.querySelector('#map2') !== null) {
+				var map2 = L.map('map2').setView([52.2297700, 21.0117800], 13);
+				L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+					maxZoom: 30,
+				}).addTo(map2);
+
+
+				var popup2 = L.popup()
+					.setLatLng([52.2297700, 21.0117800])
+					.setContent(`   <div class="marker-map_container"><img src='img/056A3873.png' alt="map"><h6>Projekt Cuberniok</h6><p>Szczyrk, ul. Pod Stokiem 10</p><button type="button" class="btn-gold">Sprawdź dojazd</button></div> `)
+
+					.openOn(map2);
+
+
+
+
+
+			}
+		};
+	</script>
+</body>
+
+</html>
